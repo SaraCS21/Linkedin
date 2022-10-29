@@ -62,39 +62,32 @@ function truco(){
         let altura = niño["altura"];
 
         num_sustos += Math.floor(nombre.length / 2);
-        if (edad % 2 === 0){
-            num_sustos += 2;
-        } 
+        num_sustos += edad % 2 === 0 ? 2 : 0;
         altura_total += altura;
     });
 
-    num_sustos +=  Math.floor(altura_total / 100);
+    num_sustos += Math.floor(altura_total / 100) * 3;
     return num_sustos;
 }
 
 function trato(){
-    let num_sustos = 0;
-    let altura_total = 0;
+    let num_dulces = 0;
 
     niños.forEach(niño => {
         let nombre = niño["nombre"];
         let edad = niño["edad"];
         let altura = niño["altura"];
 
-        num_sustos += nombre.length;
+        num_dulces += nombre.length;
         
-        if (edad > 10){
-            edad = 10;
-        } 
-        num_sustos += Math.floor(edad / 3);
+        edad = edad > 10 ? 10 : edad;
+        num_dulces += Math.floor(edad / 3);
         
-        if (altura > 150){
-            altura = 150
-        };
-        num_sustos += Math.floor(altura / 50) * 2;
+        altura = altura > 150 ? 150 : altura;
+        num_dulces += Math.floor(altura / 50) * 2;
     });
 
-    return num_sustos;
+    return num_dulces;
 }
 
 function valor_aleatorio(array, num){
