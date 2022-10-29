@@ -49,8 +49,8 @@ const niños = [
     }
 ];
 
-const sustos = ["calabaza", "fantasma", "calavera", "araña", "telaraña", "murciélago"];
-const dulces = ["tarta", "caramelo", "pinchito", "piruleta", "galleta", "chocolate", "muffing", "donut"];
+const sustos = ["🎃", "👻", "💀", "🕷", "🕸", "🦇"];
+const dulces = ["🍰", "🍬", "🍡", "🍭", "🍪", "🍫", "🧁", "🍩"];
 
 function truco(){
     let num_sustos = 0;
